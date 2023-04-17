@@ -29,6 +29,30 @@
         </div>
       </div>
     </div>
+    <div>
+      <!--<button onclick="showConfirmBox()">Show Dialog</button>-->
+      <div  id="confirm-box" hidden>
+        <p>Do you want to include lowercase?</p>
+        <button onclick="confirm('yes')">Yes</button>
+        <button onclick="confirm('no')">No</button>
+      </div>
+      <div  id="confirm-box2" hidden>
+        <p>Do you want to include uppercase?</p>
+        <button onclick="confirmUpperCase('yes')">Yes</button>
+        <button onclick="confirmUpperCase('no')">No</button>
+      </div>
+      <div  id="confirm-box3" hidden>
+        <p>Do you want to include Numbers?</p>
+        <button onclick="confirmNumber('yes')">Yes</button>
+        <button onclick="confirmNumber('no')">No</button>
+      </div>
+    </div>
+    <div  id="confirm-box4" hidden>
+      <p>Do you want to include Special Characters?</p>
+      <button onclick="confirmCharacter('yes')">Yes</button>
+      <button onclick="confirmCharacter('no')">No</button>
+    </div>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>

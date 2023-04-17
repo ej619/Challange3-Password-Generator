@@ -135,3 +135,43 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+#confirm-box{
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  width: 25%;
+  height: 16%;
+  left: 38%;
+  background-color: beige;
+}
+
+#confirm-box2{
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  width: 25%;
+  height: 16%;
+  left: 38%;
+  background-color: beige;
+}
+
+#confirm-box3{
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  width: 25%;
+  height: 16%;
+  left: 38%;
+  background-color: beige;
+}
+
+#confirm-box4{
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  width: 25%;
+  height: 16%;
+  left: 38%;
+  background-color: beige;
+}
