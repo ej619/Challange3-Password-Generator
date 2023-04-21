@@ -19,12 +19,8 @@ function writePassword() {
       criteria.length = length;
   }
   
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
-
-  //passwordText.value = password;
-
 }  
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -57,7 +53,7 @@ function confirmUpperCase(data) {
     document.getElementById("confirm-box3").hidden = false;
     console.log("include uppercase?: " + criteria.includeUpperCase);
   }
-}
+};
 
 function confirmNumber(data) {
   if (data === "yes") {
@@ -70,7 +66,7 @@ function confirmNumber(data) {
     document.getElementById("confirm-box4").hidden = false;
     console.log("include Numbers? " + criteria.includeNumbers)
   }
-}
+};
 
 function confirmCharacter(data) {
   if (data === "yes") {
@@ -83,5 +79,47 @@ function confirmCharacter(data) {
   }
 
   console.log(criteria);
+
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 }
 
+//Generate Password
+function generatePassword() {
+  length = criteria.length;
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numbers = "0123456789";
+  var characters = "!@#$%&*";
+
+  if (criteria.includeLowerCase === false) {
+    lowerCase = "";
+  };
+
+  if (criteria.includeUpperCase === false) {
+    upperCase = "";
+  };
+
+  if (criteria.includeNumbers === false) {
+    numbers = "";
+  };
+
+  if (criteria.includeCharacters === false) {
+    characters = "";
+  };
+
+  var charset = lowerCase+upperCase+numbers+characters;
+
+  if (charset.length < 1) {
+    window.alert("You must select at leat one character type");
+  };
+
+  retVal = "";
+
+  for (var i = 0, n = charset.length; i < length; ++i) {
+    retVal += charset.charAt(Math.floor(Math.random() * n));
+};
+return retVal
+};
